@@ -25,7 +25,6 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-.env*
 
 # PyInstaller
 #   Usually these files are written by a python script from a template
@@ -136,7 +135,7 @@ celerybeat.pid
 *.rdb
 *.aof
 *.pid
-
+.env*
 # RabbitMQ
 mnesia/
 rabbitmq/
@@ -153,6 +152,7 @@ activemq-data/
 .envrc
 .venv
 env/
+.env/
 venv/
 lc-academy-env/
 ENV/

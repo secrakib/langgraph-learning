@@ -2,7 +2,8 @@ from langchain_groq import ChatGroq
 from langgraph.graph import MessagesState
 from langgraph.graph import StateGraph, START, END
 from langgraph.prebuilt import ToolNode, tools_condition
-
+from dotenv import load_dotenv
+load_dotenv()
 # Tool
 def multiply(a: int, b: int) -> int:
     """Multiplies a and b.
@@ -14,7 +15,7 @@ def multiply(a: int, b: int) -> int:
     return a * b
 
 # LLM with bound tool
-llm = ChatGroq()#model="gpt-4o")
+llm = ChatGroq(model='llama-3.3-70b-versatile')#model="gpt-4o")
 llm_with_tools = llm.bind_tools([multiply])
 
 # Node
